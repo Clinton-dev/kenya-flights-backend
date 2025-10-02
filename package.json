@@ -1,12 +1,31 @@
 {
-  "name": "metasearch-ke-flights",
+  "name": "kenya-flights-backend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest --runInBand"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "node",
+    "express",
+    "duffel",
+    "kenya-airways",
+    "flights"
+  ],
+  "author": "Clinton-dev",
   "license": "ISC",
-  "description": ""
+  "description": "Backend service for Kenyan flight search using Duffel API",
+  "dependencies": {
+    "axios": "^1.12.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.4"
+  }
 }
