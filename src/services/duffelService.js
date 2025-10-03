@@ -35,6 +35,7 @@ export const getFlights = async ({ origin, destination, departure_date, passenge
         price: `${offer.total_currency} ${offer.total_amount}`,
     }));
 
+    // TODO: Filter by specific airline code if needed
     /*
     return offers
         .filter((offer) =>
