@@ -1,0 +1,58 @@
+{
+  "info": {
+    "name": "Duffel Flights API",
+    "_postman_id": "d8f2f100-kenya-kq",
+    "description": "Postman collection for testing Duffel API flight search for Kenya Airways (KQ).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Search Flights (NBO → MBA)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{DUFFEL_API_KEY}}",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Duffel-Version",
+            "value": "beta",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cabin_class\": \"economy\",\n  \"passengers\": [\n    { \"type\": \"adult\" }\n  ],\n  \"slices\": [\n    {\n      \"origin\": \"NBO\",\n      \"destination\": \"MBA\",\n      \"departure_date\": \"2025-10-10\"\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "https://api.duffel.com/air/offer_requests",
+          "protocol": "https",
+          "host": [
+            "api",
+            "duffel",
+            "com"
+          ],
+          "path": [
+            "air",
+            "offer_requests"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "DUFFEL_API_KEY",
+      "value": "duffel_test_xxxxxxxxx",
+      "type": "string"
+    }
+  ]
+}
